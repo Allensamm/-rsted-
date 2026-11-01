@@ -13,6 +13,17 @@ React 19, TypeScript, Next.js-compatible Vinext, Tailwind CSS 4 with custom resp
 
 The managed environment uses the Sites setup/install/build helpers instead of a second dev server.
 
+## Deploying to Vercel
+
+Import this repository with the repository root as the Root Directory. The committed
+`vercel.json` selects Next.js and runs its native production build, producing `.next`.
+This overrides the default `pnpm build` command, which is retained for the original
+Sites/Cloudflare preview. No environment variables or database bindings are required
+for the homepage. Git pushes to the connected production branch trigger a new build.
+
+To verify the Vercel build locally after installing dependencies, run
+`node node_modules/next/dist/bin/next build --webpack`.
+
 ## Source map
 
 - `app/page.tsx`: complete ten-section homepage and corporate footer.
